@@ -19,8 +19,7 @@ int main() {
         node[add].next = next;
         node[add].add = address;
     }
-    int pos = head;
-    int cnt = 0;
+    int pos, cnt = 0;
     for (pos = head; pos != -1; pos = node[pos].next) {
         if (node[pos].num < 0) {
             if (cnt != 0) cout << node[pos].add << endl;
@@ -28,7 +27,6 @@ int main() {
             cnt++;
         }
     }
-    pos = head;
     for (pos = head; pos != -1; pos = node[pos].next) {
         if (node[pos].num >= 0 && node[pos].num <= k) {
             if (cnt != 0) cout << node[pos].add << endl;
@@ -36,7 +34,6 @@ int main() {
             cnt++;
         }
     }
-    pos = head;
     for (pos = head; pos != -1; pos = node[pos].next) {
         if (node[pos].num > k) {
             if (cnt != 0) cout << node[pos].add << endl;
